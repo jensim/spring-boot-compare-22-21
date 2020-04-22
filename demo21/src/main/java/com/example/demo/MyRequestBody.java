@@ -1,9 +1,11 @@
 package com.example.demo;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class MyRequestBody {
     @JsonProperty
     private String foo1;
