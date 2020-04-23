@@ -1,4 +1,5 @@
 # Compare CPU impact of Spring RequestParam on 5.1 vs 5.2
+[![Build Status](https://travis-ci.org/jensim/spring-boot-compare-22-21.svg?branch=master)](https://travis-ci.org/jensim/spring-boot-compare-22-21)
 
 Im trying to illustrate a very noticable increase in CPU usage moving from v5.1 to v5.2
 ![GET 2.1](./images/21compare/GET%20Screen%20Shot%202020-04-23%20at%2006.26.33.png)
