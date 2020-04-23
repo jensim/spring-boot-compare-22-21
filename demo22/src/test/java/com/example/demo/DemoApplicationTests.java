@@ -56,4 +56,10 @@ public class DemoApplicationTests {
 		ResponseEntity<Void> request = restTemplate.getForEntity("/?foo01=foo01", Void.class);
 		assertThat(request.getStatusCode(), is(BAD_REQUEST));
 	}
+
+	@Test
+	public void testGetWithDefaults() {
+		ResponseEntity<Void> request = restTemplate.getForEntity("/defaults/", Void.class);
+		assertThat(request.getStatusCode(), is(OK));
+	}
 }
