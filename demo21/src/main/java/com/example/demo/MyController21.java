@@ -10,53 +10,53 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/")
-public class MyController {
+public class MyController21 {
 
         @GetMapping("/")
-    public void getter(
-            @Schema(description = "foo01 description", example = "foo01")
-            @RequestParam(required = true) String foo01,
-            @Schema(description = "foo02 description", example = "ASC")
-            @RequestParam(required = true) SortOrder foo02,
-            @Schema(description = "foo03 description", example = "3")
-            @Min(0) @Max(10) @RequestParam(required = true) int foo03,
-            @Schema(description = "foo04 description", example = "4")
-            @RequestParam(required = false) Integer foo04,
-            @Schema(description = "foo05 description", example = "5.5")
-            @Min(1) @Max(10) @RequestParam(required = true) double foo05,
-            @Schema(description = "foo06 description", example = "6")
-            @Min(1) @Max(10) @RequestParam(required = true) Long foo06,
-            @Schema(description = "foo07 description", example = "DES")
-            @RequestParam(required = true) SortOrder foo07,
-            @Schema(description = "foo08 description", example = "foo08")
-            @RequestParam(required = true) String foo08,
-            @Schema(description = "foo09 description", example = "foo09")
-            @RequestParam(required = true) String foo09,
-            @Schema(description = "foo10 description", example = "DES,ASC,FAR")
-            @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder> foo10,
-            @Schema(description = "foo11 description", example = "DES,ASC,FAR")
-            @RequestParam(required = true) List<SortOrder> foo11,
-            @Schema(description = "foo12 description", example = "ASC")
-            @RequestParam(required = true) SortOrder foo12,
-            @Schema(description = "foo13 description", example = "3")
-            @Min(0) @Max(10) @RequestParam(required = true) int foo13,
-            @Schema(description = "foo14 description", example = "4")
-            @RequestParam(required = false) Integer foo14,
-            @Schema(description = "foo15 description", example = "5.5")
-            @Min(1) @Max(10) @RequestParam(required = true) double foo15,
-            @Schema(description = "foo16 description", example = "6")
-            @Min(1) @Max(10) @RequestParam(required = true) Long foo16,
-            @Schema(description = "foo17 description", example = "DES")
-            @RequestParam(required = true) SortOrder foo17,
-            @Schema(description = "foo18 description", example = "foo18")
-            @RequestParam(required = true) String foo18,
-            @Schema(description = "foo19 description", example = "foo19")
-            @RequestParam(required = true) String foo19,
-            @Schema(description = "foo20 description", example = "DES,ASC,FAR")
-            @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder> foo20,
-            @Schema(description = "foo21 description", example = "DES,ASC,FAR")
-            @RequestParam(required = true) List<SortOrder> foo21
-    ) {
+        public void getter(
+                @Schema(description = "foo01 description", example = "foo01")
+                @RequestParam(required = true) String foo01,
+                @Schema(description = "foo02 description", example = "ASC")
+                @RequestParam(required = true) SortOrder21 foo02,
+                @Schema(description = "foo03 description", example = "3")
+                @Min(0) @Max(10) @RequestParam(required = true) int foo03,
+                @Schema(description = "foo04 description", example = "4")
+                @RequestParam(required = false) Integer foo04,
+                @Schema(description = "foo05 description", example = "5.5")
+                @Min(1) @Max(10) @RequestParam(required = true) double foo05,
+                @Schema(description = "foo06 description", example = "6")
+                @Min(1) @Max(10) @RequestParam(required = true) Long foo06,
+                @Schema(description = "foo07 description", example = "DES")
+                @RequestParam(required = true) SortOrder21 foo07,
+                @Schema(description = "foo08 description", example = "foo08")
+                @RequestParam(required = true) String foo08,
+                @Schema(description = "foo09 description", example = "foo09")
+                @RequestParam(required = true) String foo09,
+                @Schema(description = "foo10 description", example = "DES,ASC,FAR")
+                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder21> foo10,
+                @Schema(description = "foo11 description", example = "DES,ASC,FAR")
+                @RequestParam(required = true) List<SortOrder21> foo11,
+                @Schema(description = "foo12 description", example = "ASC")
+                @RequestParam(required = true) SortOrder21 foo12,
+                @Schema(description = "foo13 description", example = "3")
+                @Min(0) @Max(10) @RequestParam(required = true) int foo13,
+                @Schema(description = "foo14 description", example = "4")
+                @RequestParam(required = false) Integer foo14,
+                @Schema(description = "foo15 description", example = "5.5")
+                @Min(1) @Max(10) @RequestParam(required = true) double foo15,
+                @Schema(description = "foo16 description", example = "6")
+                @Min(1) @Max(10) @RequestParam(required = true) Long foo16,
+                @Schema(description = "foo17 description", example = "DES")
+                @RequestParam(required = true) SortOrder21 foo17,
+                @Schema(description = "foo18 description", example = "foo18")
+                @RequestParam(required = true) String foo18,
+                @Schema(description = "foo19 description", example = "foo19")
+                @RequestParam(required = true) String foo19,
+                @Schema(description = "foo20 description", example = "DES,ASC,FAR")
+                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder21> foo20,
+                @Schema(description = "foo21 description", example = "DES,ASC,FAR")
+                @RequestParam(required = true) List<SortOrder21> foo21
+        ) {
                 Objects.requireNonNull(foo01);
                 Objects.requireNonNull(foo02);
                 Objects.requireNonNull(foo03);
@@ -85,7 +85,7 @@ public class MyController {
                 @Schema(description = "foo01 description", example = "foo01")
                 @RequestParam(required = false, defaultValue = "foo1") String foo01,
                 @Schema(description = "foo02 description", example = "ASC")
-                @RequestParam(required = false, defaultValue = "FAR") SortOrder foo02,
+                @RequestParam(required = false, defaultValue = "FAR") SortOrder21 foo02,
                 @Schema(description = "foo03 description", example = "3")
                 @Min(0) @Max(10) @RequestParam(required = false, defaultValue = "3") int foo03,
                 @Schema(description = "foo04 description", example = "4")
@@ -95,17 +95,17 @@ public class MyController {
                 @Schema(description = "foo06 description", example = "6")
                 @Min(1) @Max(10) @RequestParam(required = false, defaultValue = "6") Long foo06,
                 @Schema(description = "foo07 description", example = "DES")
-                @RequestParam(required = false, defaultValue = "DES") SortOrder foo07,
+                @RequestParam(required = false, defaultValue = "DES") SortOrder21 foo07,
                 @Schema(description = "foo08 description", example = "foo08")
                 @RequestParam(required = false, defaultValue = "foo08") String foo08,
                 @Schema(description = "foo09 description", example = "foo09")
                 @RequestParam(required = false, defaultValue = "foo09") String foo09,
                 @Schema(description = "foo10 description", example = "DES,ASC,FAR")
-                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder> foo10,
+                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder21> foo10,
                 @Schema(description = "foo11 description", example = "DES,ASC,FAR")
-                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder> foo11,
+                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder21> foo11,
                 @Schema(description = "foo12 description", example = "ASC")
-                @RequestParam(required = false, defaultValue = "ASC") SortOrder foo12,
+                @RequestParam(required = false, defaultValue = "ASC") SortOrder21 foo12,
                 @Schema(description = "foo13 description", example = "3")
                 @Min(0) @Max(10) @RequestParam(required = false, defaultValue = "3") int foo13,
                 @Schema(description = "foo14 description", example = "4")
@@ -115,15 +115,15 @@ public class MyController {
                 @Schema(description = "foo16 description", example = "6")
                 @Min(1) @Max(10) @RequestParam(required = false, defaultValue = "6") Long foo16,
                 @Schema(description = "foo17 description", example = "DES")
-                @RequestParam(required = false, defaultValue = "DES") SortOrder foo17,
+                @RequestParam(required = false, defaultValue = "DES") SortOrder21 foo17,
                 @Schema(description = "foo18 description", example = "foo18")
                 @RequestParam(required = false, defaultValue = "foo18") String foo18,
                 @Schema(description = "foo19 description", example = "foo19")
                 @RequestParam(required = false, defaultValue = "foo19") String foo19,
                 @Schema(description = "foo20 description", example = "DES,ASC,FAR")
-                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder> foo20,
+                @RequestParam(required = false, defaultValue = "DES,ASC,FAR") List<SortOrder21> foo20,
                 @Schema(description = "foo21 description", example = "DES,ASC,FAR")
-                @RequestParam(required = false, defaultValue = "DES,VER") List<SortOrder> foo21
+                @RequestParam(required = false, defaultValue = "DES,VER") List<SortOrder21> foo21
         ) {
                 Objects.requireNonNull(foo01);
                 Objects.requireNonNull(foo02);

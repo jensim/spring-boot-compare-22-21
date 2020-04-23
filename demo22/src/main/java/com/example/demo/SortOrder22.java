@@ -3,7 +3,7 @@ package com.example.demo;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 @Schema(description = "Sorting order for something")
-public enum SortOrder {
+public enum SortOrder22 {
     @Schema(description = "Ascending sorting order")
     ASC,
     @Schema(description = "Descending sorting order")
