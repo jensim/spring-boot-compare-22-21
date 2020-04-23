@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
@@ -18,9 +19,11 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+@ExtendWith(SpringExtension.class)
 @SpringBootTest(webEnvironment = RANDOM_PORT)
-class DemoApplicationTests {
+public class DemoApplicationTests {
 
 	@Autowired
 	private TestRestTemplate restTemplate;
@@ -40,20 +43,20 @@ class DemoApplicationTests {
 	private final List<Integer> cpuList = new ArrayList<Integer>();
 
 	@BeforeEach
-	void setUp() {
+	public void setUp() {
 		HttpHeaders headers = new HttpHeaders();
 		headers.add(HttpHeaders.CONTENT_TYPE, APPLICATION_JSON_VALUE);
 		postEntity = new RequestEntity<String>(postBody, headers, HttpMethod.POST, URI.create("/"), Void.TYPE);
 	}
 
 	@Test
-	void testGet() {
+	public void testGet() {
 		ResponseEntity<Void> request = restTemplate.getForEntity(getUri, Void.class);
 		assertThat(request.getStatusCode(), is(OK));
 	}
 
 	@Test
-	void testPost() {
+	public void testPost() {
 		ResponseEntity<Void> request = restTemplate.exchange(postEntity, Void.class);
 		assertThat(request.getStatusCode(), is(OK));
 	}
