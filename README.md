@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/jensim/spring-boot-compare-22-21.svg?branch=master)](https://travis-ci.org/jensim/spring-boot-compare-22-21)
 
 Im trying to illustrate a very noticeable increase in CPU usage moving from v5.1 to v5.2
-![GET 2.1 with defaults](./images/21%20Screen%20Shot%202020-04-23%20at%2011.15.58.png)
-![GET 2.2 with defaults](./images/22%20Screen%20Shot%202020-04-23%20at%2011.18.29.png)
+![GET 2.1 with defaults](./images/compare/21%20Screen%20Shot%202020-04-23%20at%2011.15.58.png)
+![GET 2.2 with defaults](./images/compare/22%20Screen%20Shot%202020-04-23%20at%2011.18.29.png)
 
 We recently (tried to) upgrade one of our services in production, but rolled back once we noticed a rough doubling in CPU usage on the upgraded JVMs.
 The service in question handles a lot of requests, but doesn't do very much on its own, just some fanning out and collecting data from other services.
@@ -18,3 +18,8 @@ The CPU increase is roughly double, but only when we have an access logging filt
 
 ## Conclusion
 SpringFramework 5.2 has a regression in CPU performance when dealing with `RequestParameter`s with default values in combination with having a `Filter` that looks at the `HttpServletRequest` & `HttpServletResponse` (AccessLogging). The impact on CPU is massive when upgrading from `5.1` to `5.2`.
+
+## 5.2.6.BUILD-SNAPSHOT
+Recordings made 2020-04-26. It looks like vast improvement over 5.2.5.RELEASE.
+![5.1.14.RELEASE](./images/compare/snapshot/5.1.14.RELEASE%20Screen%20Shot%202020-04-26%20at%2019.48.47.png)
+![5.2.6.BUILD-SNAPSHOT](./images/compare/snapshot/5.2.6.BUILD-SNAPSHOT%20Screen%20Shot%202020-04-26%20at%2019.49.38.png)
